@@ -300,3 +300,16 @@ __all__ = [
     "LABEL2ID",
     "ID2LABEL",
 ]
+
+
+# Usage example (uncomment to run as a script)
+# from isic2018 import ISIC2018Parquet
+# from torchvision import transforms
+# from torch.utils.data import DataLoader
+
+# tfms = transforms.Compose([transforms.Resize((224,224)), transforms.ToTensor()])
+# train_ds = ISIC2018Parquet(root="~/.cache/isic2018", split="train", transform=tfms, download=True)
+# val_ds   = ISIC2018Parquet(root="~/.cache/isic2018", split="val",   transform=tfms, download=True)
+# test_ds  = ISIC2018Parquet(root="~/.cache/isic2018", split="test",  transform=tfms, download=True)
+
+# train_loader = DataLoader(train_ds, batch_size=32, shuffle=True, num_workers=4, pin_memory=True)
